@@ -38,10 +38,10 @@
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             GioiTinh = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
+            NgaySinh = new DataGridViewTextBoxColumn();
+            MSSV = new DataGridViewTextBoxColumn();
             NganhHoc = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
+            DTB = new DataGridViewTextBoxColumn();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
@@ -68,6 +68,10 @@
             Column8 = new DataGridViewTextBoxColumn();
             Column9 = new DataGridViewTextBoxColumn();
             Column10 = new DataGridViewTextBoxColumn();
+            btnxoa = new Button();
+            btnsua = new Button();
+            btnxoa1 = new Button();
+            btnsua1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
@@ -131,23 +135,24 @@
             // 
             // btnNhap1
             // 
+            btnNhap1.BackColor = Color.Lime;
             btnNhap1.Font = new Font("Tahoma", 13F);
-            btnNhap1.Location = new Point(322, 37);
+            btnNhap1.Location = new Point(279, 37);
             btnNhap1.Name = "btnNhap1";
             btnNhap1.Size = new Size(150, 60);
             btnNhap1.TabIndex = 3;
             btnNhap1.Text = "Nhập";
-            btnNhap1.UseVisualStyleBackColor = true;
+            btnNhap1.UseVisualStyleBackColor = false;
             btnNhap1.Click += btnNhap1_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, GioiTinh, Column2, Column3, NganhHoc, Column4 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, GioiTinh, NgaySinh, MSSV, NganhHoc, DTB });
             dataGridView1.Location = new Point(65, 736);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.Size = new Size(748, 457);
+            dataGridView1.Size = new Size(578, 457);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -167,21 +172,21 @@
             GioiTinh.Name = "GioiTinh";
             GioiTinh.Width = 200;
             // 
-            // Column2
+            // NgaySinh
             // 
-            Column2.DataPropertyName = "ngaySinh";
-            Column2.HeaderText = "Ngày sinh";
-            Column2.MinimumWidth = 10;
-            Column2.Name = "Column2";
-            Column2.Width = 200;
+            NgaySinh.DataPropertyName = "ngaySinh";
+            NgaySinh.HeaderText = "Ngày sinh";
+            NgaySinh.MinimumWidth = 10;
+            NgaySinh.Name = "NgaySinh";
+            NgaySinh.Width = 200;
             // 
-            // Column3
+            // MSSV
             // 
-            Column3.DataPropertyName = "mSSV";
-            Column3.HeaderText = "MSSV";
-            Column3.MinimumWidth = 10;
-            Column3.Name = "Column3";
-            Column3.Width = 200;
+            MSSV.DataPropertyName = "mSSV";
+            MSSV.HeaderText = "MSSV";
+            MSSV.MinimumWidth = 10;
+            MSSV.Name = "MSSV";
+            MSSV.Width = 200;
             // 
             // NganhHoc
             // 
@@ -191,13 +196,13 @@
             NganhHoc.Name = "NganhHoc";
             NganhHoc.Width = 200;
             // 
-            // Column4
+            // DTB
             // 
-            Column4.DataPropertyName = "diemTB";
-            Column4.HeaderText = "ĐTB";
-            Column4.MinimumWidth = 10;
-            Column4.Name = "Column4";
-            Column4.Width = 200;
+            DTB.DataPropertyName = "diemTB";
+            DTB.HeaderText = "ĐTB";
+            DTB.MinimumWidth = 10;
+            DTB.Name = "DTB";
+            DTB.Width = 200;
             // 
             // label5
             // 
@@ -372,23 +377,24 @@
             // 
             // btnnhap2
             // 
+            btnnhap2.BackColor = Color.Lime;
             btnnhap2.Font = new Font("Tahoma", 13F);
-            btnnhap2.Location = new Point(1275, 37);
+            btnnhap2.Location = new Point(1189, 37);
             btnnhap2.Name = "btnnhap2";
             btnnhap2.Size = new Size(150, 60);
             btnnhap2.TabIndex = 5;
             btnnhap2.Text = "Nhập";
-            btnnhap2.UseVisualStyleBackColor = true;
+            btnnhap2.UseVisualStyleBackColor = false;
             btnnhap2.Click += btnnhap2_Click;
             // 
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column5, Column6, Column7, Column8, Column9, Column10 });
-            dataGridView2.Location = new Point(921, 736);
+            dataGridView2.Location = new Point(905, 736);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 82;
-            dataGridView2.Size = new Size(841, 457);
+            dataGridView2.Size = new Size(652, 457);
             dataGridView2.TabIndex = 6;
             // 
             // Column5
@@ -439,11 +445,67 @@
             Column10.Name = "Column10";
             Column10.Width = 200;
             // 
+            // btnxoa
+            // 
+            btnxoa.BackColor = Color.Red;
+            btnxoa.Font = new Font("Tahoma", 13F);
+            btnxoa.ForeColor = Color.White;
+            btnxoa.Location = new Point(65, 37);
+            btnxoa.Name = "btnxoa";
+            btnxoa.Size = new Size(150, 60);
+            btnxoa.TabIndex = 7;
+            btnxoa.Text = "Xoá";
+            btnxoa.UseVisualStyleBackColor = false;
+            btnxoa.Click += btnxoa_Click;
+            // 
+            // btnsua
+            // 
+            btnsua.BackColor = Color.Yellow;
+            btnsua.Font = new Font("Tahoma", 13F);
+            btnsua.ForeColor = Color.Red;
+            btnsua.Location = new Point(502, 37);
+            btnsua.Name = "btnsua";
+            btnsua.Size = new Size(150, 60);
+            btnsua.TabIndex = 8;
+            btnsua.Text = "Sửa";
+            btnsua.UseVisualStyleBackColor = false;
+            btnsua.Click += btnsua_Click;
+            // 
+            // btnxoa1
+            // 
+            btnxoa1.BackColor = Color.Red;
+            btnxoa1.Font = new Font("Tahoma", 13F);
+            btnxoa1.ForeColor = Color.White;
+            btnxoa1.Location = new Point(903, 37);
+            btnxoa1.Name = "btnxoa1";
+            btnxoa1.Size = new Size(150, 60);
+            btnxoa1.TabIndex = 9;
+            btnxoa1.Text = "Xoá";
+            btnxoa1.UseVisualStyleBackColor = false;
+            btnxoa1.Click += btnxoa1_Click;
+            // 
+            // btnsua1
+            // 
+            btnsua1.BackColor = Color.Yellow;
+            btnsua1.Font = new Font("Tahoma", 13F);
+            btnsua1.ForeColor = Color.Red;
+            btnsua1.Location = new Point(1407, 37);
+            btnsua1.Name = "btnsua1";
+            btnsua1.Size = new Size(150, 60);
+            btnsua1.TabIndex = 9;
+            btnsua1.Text = "Sửa";
+            btnsua1.UseVisualStyleBackColor = false;
+            btnsua1.Click += btnsua1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1701, 1310);
+            ClientSize = new Size(2149, 1310);
+            Controls.Add(btnsua1);
+            Controls.Add(btnxoa1);
+            Controls.Add(btnsua);
+            Controls.Add(btnxoa);
             Controls.Add(dataGridView2);
             Controls.Add(btnnhap2);
             Controls.Add(dataGridView1);
@@ -510,17 +572,21 @@
         private TextBox txtChucvu;
         private Button btnnhap2;
         private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn GioiTinh;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn NganhHoc;
-        private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
         private DataGridViewTextBoxColumn Column10;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn GioiTinh;
+        private DataGridViewTextBoxColumn NgaySinh;
+        private DataGridViewTextBoxColumn MSSV;
+        private DataGridViewTextBoxColumn NganhHoc;
+        private DataGridViewTextBoxColumn DTB;
+        private Button btnxoa;
+        private Button btnsua;
+        private Button btnxoa1;
+        private Button btnsua1;
     }
 }

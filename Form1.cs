@@ -1,4 +1,4 @@
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace LeChucGiang_Buoi5_
 {
@@ -36,6 +36,91 @@ namespace LeChucGiang_Buoi5_
             dataGridView2.DataSource = null;
             dataGridView2.DataSource = li_nv;
 
+        }
+
+        private void btnxoa_Click(object sender, EventArgs e)
+        {
+            foreach (SinhVien i in li_sv)
+            {
+                if (txtMSSV.Text == i.MSSV)
+                {
+                    li_sv.Remove(i);
+                    break;
+                    
+                }
+              
+
+            }
+            dataGridView1.DataSource = null;
+
+            dataGridView1.DataSource = li_sv;
+        }
+
+        private void btnsua_Click(object sender, EventArgs e)
+        {
+            foreach (SinhVien i in li_sv)
+            {
+                if (txtMSSV.Text == i.MSSV)
+                {
+
+                    i.HoTen = txtTen1.Text;
+                    i.GioiTinh = txtGioitinh1.Text;
+                    i.NgaySinh = txtNgaysinh1.Text;
+                    i.NganhHoc = txtNganh.Text;
+                    i.DiemTB = double.Parse(txtDTB.Text);
+                   
+                }
+                
+                dataGridView1.DataSource = null;
+
+                dataGridView1.DataSource = li_sv;
+
+
+            }
+        }
+
+        private void btnsua1_Click(object sender, EventArgs e)
+        {
+            foreach (NhanVien i in li_nv)
+            {
+                if (txtMSNV.Text == i.MSNV)
+                {
+                    
+                    i.HoTen = txtTen1.Text;
+                    i.GioiTinh = txtGioitinh1.Text;
+                    i.NgaySinh = txtNgaysinh1.Text;
+                    i.MSNV = txtMSSV.Text;
+                    i.Luong = txtLuong.Text;
+                    i.ChucVu = txtChucvu.Text;
+
+                    dataGridView2.DataSource = null;
+
+                    dataGridView2.DataSource = li_nv;
+                }
+                
+                dataGridView2.DataSource = null;
+
+                dataGridView2.DataSource = li_nv;
+
+            }
+
+        }
+
+        private void btnxoa1_Click(object sender, EventArgs e)
+        {
+            foreach (NhanVien i in li_nv)
+            {
+                if (txtMSNV.Text == i.MSNV)
+                {
+                    li_nv.Remove(i);
+                    break;
+                    
+                }
+                
+
+            }
+            dataGridView2.DataSource = null;
+            dataGridView2.DataSource = li_nv;
         }
     }
 }

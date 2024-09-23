@@ -21,7 +21,7 @@ namespace LeChucGiang_Buoi5_
 
         }
 
-        public NhanVien(string hoTen, string ngaySinh, string gioiTinh, string mSNV, string luong, string chucVu)
+        public NhanVien(string hoTen, string gioiTinh, string ngaySinh, string mSNV, string luong, string chucVu)
         {
             this.HoTen = hoTen;
             this.NgaySinh = ngaySinh;

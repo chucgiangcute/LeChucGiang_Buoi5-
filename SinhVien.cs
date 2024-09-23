@@ -20,7 +20,7 @@ namespace LeChucGiang_Buoi5_
         {
 
         }
-        public SinhVien(string hoTen, string ngaySinh, string gioiTinh, string mSSV,string nganhHoc, double diemTB)
+        public SinhVien(string hoTen, string gioiTinh, string ngaySinh, string mSSV,string nganhHoc, double diemTB)
         {
             this.HoTen = hoTen;
             this.NgaySinh = ngaySinh;
